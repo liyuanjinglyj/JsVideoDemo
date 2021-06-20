@@ -1,0 +1,17 @@
+{
+  "data": {
+    "title": "TitleTitleTitleTitleTitleTitleTitleTitle",
+    "detail": "TextTextTextTextTextTextTextTextTextText",
+    "iconTitle": "Picture"
+  },
+  "actions": {
+    "routerEvent": {
+      "action": "router",
+      "bundleName": "com.example.jsvideodemo",
+      "abilityName": "com.example.jsvideodemo.widget.widget.WidgetAbility",
+      "params": {
+        "message": "add detail"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<div style="flex-direction : column;">
+    <video id='videoId' src='{{ mp4_url }}' muted='false' autoplay='false' poster='{{ url }}' controls="true"
+           onprepared='preparedCallback' onstart='startCallback' onpause='pauseCallback' onfinish='finishCallback'
+           onerror='errorCallback' onseeking='seekingCallback' onseeked='seekedCallback'
+           ontimeupdate='timeupdateCallback' style="object-fit : fill; width : 100%; height : 250px;"
+           onlongpress='change_fullscreenchange' onclick="change_start_pause"/>
+    <div class="div_list">
+        <button class="vip_button">VIP会员低至30元每季度，618狂欢进行中</button>
+        <text class="text_title">{{ title }}</text>
+        <div class="div_row">
+            <text class="div_row_text">7.5分</text>
+            <image class="div_row_image" src="../../../common/images/vip.png"/>
+            <text class="div_row_text">2333.3万次播放 · 简介 ></text>
+        </div>
+        <div class="div_row">
+            <image class="div_row2_image" src="../../../common/images/dianzan.png"/>
+            <div class="div_row2">
+                <image class="div_row2_image" src="../../../common/images/like.png"/>
+                <image class="div_row2_image" src="../../../common/images/download.png"/>
+                <image class="div_row2_image" src="../../../common/images/share.png"/>
+            </div>
+        </div>
+        <text style="font-size : 15px; font-weight : bold;margin-top: 10px;">专辑列表</text>
+        <div class="container">
+            <list class="list" divider="true">
+                <list-item for="{{responseData.vipList}}" class="list_item">
+                    <image class="list_image" src="{{$item.img_url}}"/>
+                    <text class="list_title">{{$item.title}}</text>
+                </list-item>
+            </list>
+        </div>
+    </div>
+</div>

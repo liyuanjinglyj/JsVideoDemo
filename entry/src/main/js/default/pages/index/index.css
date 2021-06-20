@@ -1,0 +1,127 @@
+.container {
+    flex-direction: column;
+    margin: 10px;
+}
+
+.divi_text{
+    position: absolute;
+    font-size: 20px;
+    margin-top: 10px;
+    color: darkorange;
+    margin-left: 10px;
+    left: 0;
+}
+
+.divi_marquee{
+    width: 130px;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    color: darkorange;
+    margin-top: 10px;
+}
+
+.list {
+    font-size: 40px;
+    height: 100px;
+    color: #000000;
+    opacity: 0.9;
+    flex-direction: row;
+}
+
+.list_item{
+    flex-direction: column;
+    align-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.list_item_text{
+    font-size: 15px;
+    color: red;
+    margin-top: 5px;
+    align-content: center;
+}
+
+.list_item_image{
+    width: 150px;
+    height: 75px;
+    border-radius:5px;
+}
+
+.swiper{
+    height: 200px;
+    indicator-bottom: 20px;
+    indicator-right: 30px;
+    indicator-color: #cf2411;
+    indicator-size: 14px;
+}
+
+.swiper_image{
+    width: 100%;
+    border-radius:25px;
+}
+
+.swiper_text{
+    position:absolute;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    color: darkturquoise;
+    left:0;
+    bottom:0;
+}
+
+.grid-row{
+    height:100px;
+    margin-left: -15px;
+}
+
+.grid-col{
+    flex-direction: column;
+    display: flex;
+    margin-right: 10px;
+    margin-left: -10px;
+}
+.grid-col_text{
+    font-size: 15px;
+    color: red;
+}
+.grid-col_image{
+    width: 150px;
+    height: 75px;
+    border-radius:5px;
+}
+
+@media screen and (device-type: tablet) and (orientation: landscape) {
+    .title {
+        font-size: 100px;
+    }
+}
+
+@media screen and (device-type: wearable) {
+    .title {
+        font-size: 28px;
+        color: #FFFFFF;
+    }
+}
+
+@media screen and (device-type: tv) {
+    .container {
+        background-image: url("../../common/images/Wallpaper.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .title {
+        font-size: 100px;
+        color: #FFFFFF;
+    }
+}
+
+@media screen and (device-type: phone) and (orientation: landscape) {
+    .title {
+        font-size: 60px;
+    }
+}

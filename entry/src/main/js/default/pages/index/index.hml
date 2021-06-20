@@ -1,0 +1,36 @@
+<div class="container">
+    <swiper class="swiper" id="swiper" index="{{ swiper_index }}" indicator="true" duration="1000" autoplay="true"
+            loop="true">
+        <div for="{{ responseData.vipList }}" onclick="swiper_onClick({{ $item }})" data="{{ $item }}">
+            <image class="swiper_image" src="{{ $item.img_url }}"/>
+            <text class="swiper_text">{{ $item.title }}</text>
+        </div>
+    </swiper>
+    <div style="flex-direction : row; height : 40px;">
+        <text class="divi_text">猜你会追 ></text>
+        <marquee class="divi_marquee">精彩的内容等着你来寻找</marquee>
+    </div>
+    <list class="list">
+        <list-item id="listItem" for="{{ responseData.vipList }}" class="list_item"
+                   onclick="list_item_onclick({{ $item }})" data="{{ $item }}">
+            <image class="list_item_image" src="{{ $item.img_url }}"/>
+            <text class="list_item_text">{{ $item.title }}</text>
+        </list-item>
+    </list>
+    <div style="flex-direction : row; height : 40px;">
+        <text class="divi_text">重磅推荐 ></text>
+        <marquee class="divi_marquee">精彩的内容等着你来寻找</marquee>
+    </div>
+    <grid-container for="{{ responseData.vipList }}" columns="3" style="margin-top : 10px;">
+        <grid-row if="{{ parseInt($item.uid) % 2 == 0 }}" class="grid-row">
+            <grid-col class="grid-col" span="2" onclick="grid_onclick({{ $item }})">
+                <image class="grid-col_image" src="{{ $item.img_url }}"/>
+                <text class="grid-col_text">{{ $item.title }}</text>
+            </grid-col>
+            <grid-col class="grid-col" span="2" onclick="grid_onclick({{ $item }})">
+                <image class="grid-col_image" src="{{ $item.img_url }}"/>
+                <text class="grid-col_text">{{ $item.title }}</text>
+            </grid-col>
+        </grid-row>
+    </grid-container>
+</div>
